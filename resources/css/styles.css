@@ -1,0 +1,62 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+/* header {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: ;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 10%;
+    background-color: #00112c;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .logo {
+    margin-right: auto;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  ul a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  ul li {
+    padding: .3rem 1.5rem;
+  }
+  
+  ul li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  ul li a:hover {
+    color: #0088a9;
+  }
+  
