@@ -1,3 +1,6 @@
+/* #394ff4 = blue */
+/* #48d8a4 = green */
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -8,55 +11,149 @@ html {
     box-sizing: inherit;
   }
 
-/* header {
-    display: flex !important;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: ;
-} */
-
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    margin: 0 auto;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    padding: 0 10%;
+    width: 100%;
+    padding: 0 1rem;
     background-color: #00112c;
     font-family: 'Ubuntu', sans-serif;
+    z-index: 999;
   }
   
-  .logo {
-    margin-right: auto;
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-  }
+.logo {
+  /* margin-right: auto; */
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.logo:hover {
+  color: #48d8a4;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li {
+  padding: 0.3rem 1.5rem;
+}
+
+ul li a {
+  transition: all 0.3s ease 0s;
+}
+
+ul li a:hover {
+  color: #48d8a4;
+}
+
+main { 
+  margin-top: 5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;  
   
-  ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-  }
+}
+
+#welcome {
+  font-family: 'Mada', sans-serif;
+  display: flex;
   
-  ul a {
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
+}
+#welcome h1 {
+  margin-left: 1rem;
+  font-size: 3rem;
+  color: #48d8a4;
+}
+
+#welcome .me {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  min-width: 350px;
+  max-width: 530px;
+}
+
+.profile {
+  margin: 2rem 1rem;
+  flex: 1 2;
+  min-width: 175px;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;  
+}
+
+#project {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#project h1 {
   
-  ul li {
-    padding: .3rem 1.5rem;
-  }
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
   
-  ul li a {
-    transition: all 0.3s ease 0s;
-  }
+}
+
+.github {
   
-  ul li a:hover {
-    color: #0088a9;
-  }
+  padding-bottom: 5rem;
+  font-size: 1.3rem;
+  color: gray;
   
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 60px 0px;
+  background-color: rgba(0,0,0,0.03);
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  color: #777;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  float: left;
+  width: 400px;
+  
+}
+
+
+
+@media only screen and (max-width: 620px){
+  #welcome {
+    flex-direction: column;
+  }
+
+  #welcome img{
+    order: 1;
+  }
+
+  #welcome div{
+    order: 2;
+  }
+}
