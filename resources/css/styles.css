@@ -4,13 +4,13 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    scroll-behavior: smooth;
   }
   *,
   *:before,
   *:after {
     box-sizing: inherit;
   }
-
 header {
     display: flex;
     justify-content: space-around;
@@ -24,7 +24,7 @@ header {
     font-family: 'Ubuntu', sans-serif;
     z-index: 999;
   }
-  
+
 .logo {
   /* margin-right: auto; */
   color: #fff;
@@ -63,6 +63,7 @@ main {
   margin-top: 5rem;
   padding-left: .5rem;
   padding-right: .5rem;
+  
 }
 
 .container {
@@ -71,62 +72,108 @@ main {
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;  
-  
+}
+
+/* @keyframes transitionD {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+} */
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #welcome {
-  font-family: 'Mada', sans-serif;
   display: flex;
-  
 }
+
 #welcome h1 {
+  animation: transitionIn 1.5s;
+  font-family: 'Ubuntu', sans-serif;
   margin-left: 1rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #48d8a4;
 }
+
+#welcome:target {
+  scroll-margin-top: 2rem;
+ }
 
 #welcome .me {
   display: flex;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
   margin-left: 1rem;
-  min-width: 350px;
-  max-width: 530px;
+  margin-right: 1rem;
+  min-width: 250px;
+  max-width: 650px;
 }
 
 .profile {
-  margin: 2rem 1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
   flex: 1 2;
-  min-width: 175px;
-  max-width: 250px;
-  height: auto;
+  min-width: 250px;
+  max-width: 300px;
+  max-height: 250px;
   border-radius: 8px;  
 }
 
+#project:target {
+  scroll-margin-top: 2rem;
+ }
+
 #project {
-  margin-top: 2rem;
+  margin-top: 5rem;
   text-align: center;
+  
 }
 
 #project h1 {
-  
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
-  margin-top: 1rem;
-  
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 .github {
-  
-  padding-bottom: 5rem;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 2rem;
   font-size: 1.3rem;
-  color: gray;
-  
+  color: gray;  
+}
+
+.github a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #171515;
+}
+
+.github a:hover {
+  color: #48d8a4;
 }
 
 .projects {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  
 }
 
 .card {
@@ -136,24 +183,279 @@ main {
   border-radius: 8px;
   color: #777;
   margin-left: 2rem;
+  margin-right: 2rem;
   margin-bottom: 3rem;
   float: left;
-  width: 400px;
+  width: 300px;
   
 }
 
+/* check this */
+.card .links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* check this */
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Ubuntu', sans-serif;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.tags a {
+  text-decoration: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  /* vertical-align: middle; */
+}
+
+.tags a:hover {
+  border: 1px solid #48d8a4;
+  color: #48d8a4;
+}
+
+#skill:target {
+  scroll-margin-top: 2rem;
+ }
+
+#skill {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#skill h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3rem;
+}
+
+.sub-p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  color: gray;
+}
+
+.skill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.skill svg {
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+}
+
+.skill .html{
+  color: #E34C26;
+  fill: #E34C26;
+}
+
+.skill .css{
+  color: #2965f1;
+  fill: #2965f1;
+}
+.skill .js{
+  color: #f3d50e;
+  fill: #f3d50e;
+}
+.skill .react{
+  color: #61DBFB;
+  fill: #61DBFB;
+}
+.skill .bootstrap{
+  color: #563d7c;
+  fill: #563d7c;
+}
+.skill .npm{
+  color: #CC3534;
+  fill: #CC3534;
+}
+.skill .node{
+  color: #64A063;
+  fill: #64A063;
+}
+.skill .git{
+  color: #F1502F;
+  fill: #F1502F;
+}
+.skill .gith{
+  color: #171515;
+  fill: #171515;
+}
+.skill .db{
+  color: #242627;
+  fill: #242627;
+}
+.skill .png {
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+}
+
+rect {
+  width: 100%;
+  height: 100%;
+  opacity: 0.01;
+}
+
+#contact h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3rem;
+}
 
 
-@media only screen and (max-width: 620px){
+footer {
+  background-color: #00112c;
+  width: 100%;
+  height: 200px;
+}
+
+@media only screen and (max-width: 890px){
+  .profile{
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and(max-width: 760px){
+  .card {
+    margin: 0 auto 3rem auto;
+  }
+  
+}
+
+@media only screen and (max-width: 745px){
   #welcome {
     flex-direction: column;
   }
+  #welcome:target {
+    scroll-margin-top: 3rem;
+  }
+  #project:target {
+    scroll-margin-top: 3.5rem;
+  }
+  #skill:target {
+    scroll-margin-top: 3.5rem;
+  }
+  #welcome h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  #project h1 {
+    font-size: 2.5rem;
+  }
+
+  #project .github {
+    font-size: 1.2rem;
+  }
+
+  #skill h1 {
+    font-size: 2.5rem;
+  }
+
+  #contact h1 {
+    font-size: 2.5rem;
+  }
+
+  #skill .sub-p {
+    font-size: 1.2rem;
+  }
+
+  .profile {
+    margin: 0 auto;
+  }
 
   #welcome img{
-    order: 1;
+    order: 2;
   }
 
   #welcome div{
-    order: 2;
+    order: 1;
+  }
+  
+}
+
+@media only screen and (max-width: 430px){
+  .card {
+    width: 275px;
+  }
+  #welcome:target {
+    scroll-margin-top: 2.5rem;
+   }
+  #project:target {
+  scroll-margin-top: 4rem;
+  }
+  #skill:target {
+    scroll-margin-top: 4rem;
+  }
+  #welcome h1 {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+  }
+  #welcome .me {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  #project h1 {
+    font-size: 2rem;
+  }
+  #project .github {
+    font-size: 1.1rem;
+  }
+  #skill h1 {
+    font-size: 2rem;
+  }
+  #skill .sub-p {
+    font-size: 1.1rem;
+  }
+  #contact h1 {
+    font-size: 2rem;
   }
 }
+
+@media only screen and (max-width: 365px){
+  .card {
+    width: 250px;
+  }
+  #project:target {
+    scroll-margin-top: 6rem;
+   }
+   #skill:target {
+    scroll-margin-top: 6rem;
+   }
+  #welcome h1{
+    padding-top: 3rem;
+    font-size: 1.8rem;
+  }
+  #project h1 {
+    font-size: 1.8rem;
+  }
+  #project .github {
+    font-size: 1rem;
+  }
+  #skill h1 {
+    font-size: 1.8rem;
+  }
+  #skill .sub-p {
+    font-size: 1rem;
+  }
+  #contact h1 {
+    font-size: 1.8rem;
+  }
+}
+
