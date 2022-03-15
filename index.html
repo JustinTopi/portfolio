@@ -23,13 +23,13 @@
           <li><a href="#welcome">About</a></li>
           <li><a href="#project">Projects</a></li>
           <li><a href="#skill">Skills</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main> 
       <div class="container">
-          <div id="welcome" tabindex="-1">
+          <div id="welcome">
             <div>
               <h1>Hey! I'm Justin.</h1>
               <p class="me">I'm a Web developer based in Thessaloniki, Greece.
@@ -39,40 +39,41 @@
                 In my free time I like to read about scientific developments, Cyber Security, Economic Theory and more.
               </p>
             </div>
-            <img class="profile" src="resources/images/jtopi.png">
+            <div class="myCard">
+              <img src="resources/images/jtopi2.jpg" class="profile">
+              <img src="resources/images/jtopi1.jpg" class="img-top profile">
+            </div>
           </div>  
           <div id="project">
             <h1><span>Projects</span></h1>
-            <p class="github">These are some of my projects, view all my projects on <a href="#">Github.</a></p>
+            <p class="github">These are some of my projects, view all my projects on <a href="https://github.com/JustinTopi" target="_blank">Github.</a></p>
             <div class="projects">
               <div class="card">
-                <h2>project 1</h2>
-                <img src="resources/images/"> 
+                <h2>2D Shooting Game</h2>
+                <img src="resources/images/2d_game.png"> 
                 <div class="link tags">
-                  <a href="https://github.com/taniarascia/new-moon" target="_blank" rel="noreferrer">Source</a>
-                  <a href="https://taniarascia.github.io/new-moon" target="_blank" rel="noreferrer">Demo</a>
+                  <a href="https://github.com/JustinTopi/2D-Game/tree/master" target="_blank" rel="noreferrer">Source</a>
+                  <a href="https://justintopi.github.io/2D-Game/" target="_blank" rel="noreferrer">Demo</a>
                 </div>
-                <p class="description">A free, open source notes app for the web.</p>
+                <p class="description">A very basic HTML, CSS and Javascript 2D Shooting Game.</p>
               </div>
               <div class="card">
-                <h2>project 2</h2>
-                <img src="resources/images/">
+                <h2>Real Estate Application</h2>
+                <img src="resources/images/realEs2.png">
                 <div class="link tags">
-                  <a href="https://github.com/taniarascia/new-moon" target="_blank" rel="noreferrer">Source</a>
-                  <a href="https://taniarascia.github.io/new-moon" target="_blank" rel="noreferrer">Demo</a>
+                  <a href="https://github.com/JustinTopi/Real-Estate-Management-System" target="_blank" rel="noreferrer">Source</a>
                 </div>
-                <p class="description">A free, open source notes app for the web.</p>
+                <p class="description">A Real Estate GUI Application build in Java and Swing as library.</p>
               </div>
               <div class="card">
-                <h2>project 3</h2>
-                <img src="resources/images/">
+                <h2>Manager.sh</h2>
+                <img src="resources/images/manager.png">
                 <div class="link tags">
-                  <a href="https://github.com/taniarascia/new-moon" target="_blank" rel="noreferrer">Source</a>
-                  <a href="https://taniarascia.github.io/new-moon" target="_blank" rel="noreferrer">Demo</a>
+                  <a href="https://github.com/JustinTopi/Bash-Scripts/blob/master/manager.sh" target="_blank" rel="noreferrer">Source</a>
                 </div>
-                <p class="description">A free, open source notes app for the web.</p>
+                <p class="description">Manager is a tool build in Bash, it allows multiple linux operations.</p>
               </div>
-              <div class="card">
+              <!-- <div class="card">
                 <h2>project 4</h2>
                 <img src="resources/images/"> 
                 <div class="link tags">
@@ -80,7 +81,7 @@
                   <a href="https://taniarascia.github.io/new-moon" target="_blank" rel="noreferrer">Demo</a>
                 </div>
                 <p class="description">A free, open source notes app for the web.</p>
-              </div>
+              </div> -->
             </div>
           </div>
           <div id="skill">
@@ -177,12 +178,37 @@
           </div>
           <div id="contact">
             <h1>Contact</h1>
+            <form action="#contact">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email">
+
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="Write your message here"></textarea>
+              
+              <input class="tooltip" type="submit" value="Submit">
+            </form>
           </div>
       </div>
       
     </main>
     <footer>
-      
+      <div class="get-in-touch">
+        <div>
+          <a href="https://github.com/JustinTopi" target="_blank">
+            <svg class="ghub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+          </a>
+        </div>
+        <div>
+          <a href="mailto:justintopi98@gmail.com">
+            <svg class="email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <p>Need a Developer?</p>
+      <p>Call me: <a href="tel:+6999525264">6999525264</a> </p>
+      <p>Email: justintopi98@gmail.com</p>
+      <p class="copyright"> &copy; Copyright 2022, Justin Topi</p>
+      <p>Made with <span class="heart">♥</span> in Thessaloniki</p>
     </footer>
   </body>
  </html>

@@ -10,7 +10,8 @@ html {
   *:before,
   *:after {
     box-sizing: inherit;
-  }
+}
+
 header {
     display: flex;
     justify-content: space-around;
@@ -20,11 +21,10 @@ header {
     top: 0;
     width: 100%;
     padding: 0 1rem;
-    background-color: #00112c;
+    background-color: #0e2449;
     font-family: 'Ubuntu', sans-serif;
     z-index: 999;
   }
-
 .logo {
   /* margin-right: auto; */
   color: #fff;
@@ -77,7 +77,7 @@ main {
 /* @keyframes transitionD {
   from {
     opacity: 0;
-    transform: rotateX(-10deg);
+    transform: rotateX(35deg);
   }
 
   to {
@@ -100,6 +100,7 @@ main {
 
 #welcome {
   display: flex;
+  padding-right: 1rem;
 }
 
 #welcome h1 {
@@ -111,7 +112,7 @@ main {
 }
 
 #welcome:target {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 3rem;
  }
 
 #welcome .me {
@@ -133,8 +134,24 @@ main {
   max-width: 300px;
   max-height: 250px;
   border-radius: 8px;  
+  
 }
 
+.myCard{
+  position: relative;
+  display: inline-block;
+}
+.myCard .img-top {
+  box-shadow: 0 0 15px rgba(0, 0, 0, .6);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.myCard:hover .img-top{
+  display: inline;
+}
 #project:target {
   scroll-margin-top: 2rem;
  }
@@ -177,7 +194,8 @@ main {
 }
 
 .card {
-  padding: 60px 0px;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 40px 0px;
   background-color: rgba(0,0,0,0.03);
   border: 1px solid #bbb;
   border-radius: 8px;
@@ -187,7 +205,26 @@ main {
   margin-bottom: 3rem;
   float: left;
   width: 300px;
-  
+}
+
+.card img {
+  height: auto;
+  margin-top: 0.5rem;
+  max-height: 100px;
+  max-width: 100%;
+}
+
+.card h2 {
+  color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card p .description {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* check this */
@@ -201,7 +238,6 @@ main {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Ubuntu', sans-serif;
   gap: 0.5rem;
   justify-content: center;
   margin: 1.5rem 0;
@@ -258,44 +294,34 @@ main {
 }
 
 .skill .html{
-  color: #E34C26;
   fill: #E34C26;
 }
 
 .skill .css{
-  color: #2965f1;
   fill: #2965f1;
 }
 .skill .js{
-  color: #f3d50e;
   fill: #f3d50e;
 }
 .skill .react{
-  color: #61DBFB;
   fill: #61DBFB;
 }
 .skill .bootstrap{
-  color: #563d7c;
   fill: #563d7c;
 }
 .skill .npm{
-  color: #CC3534;
   fill: #CC3534;
 }
 .skill .node{
-  color: #64A063;
   fill: #64A063;
 }
 .skill .git{
-  color: #F1502F;
   fill: #F1502F;
 }
 .skill .gith{
-  color: #171515;
   fill: #171515;
 }
 .skill .db{
-  color: #242627;
   fill: #242627;
 }
 .skill .png {
@@ -310,22 +336,147 @@ rect {
   height: 100%;
   opacity: 0.01;
 }
+#contact {
+  /* width: 60%; */
+}
+
+#contact:target {
+  scroll-margin-top: 2rem;
+ }
 
 #contact h1 {
+  text-align: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 3rem;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 1.2rem;
+  max-width: 650px;
+  min-width: 650px;
+}
 
-
-footer {
-  background-color: #00112c;
+input[type=text], textarea{
   width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #0e2449;
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  color: #48d8a4;
+}
+
+label {
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: .5rem;
+  font-size: 1.2rem;
+}
+
+#subject {
   height: 200px;
 }
 
+footer {
+  background-color: #0e2449;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: .1rem;
+}
+
+.get-in-touch {
+  display: flex;
+  justify-content: center;
+}
+
+footer .ghub {
+  margin-top: 2rem;
+  min-width: 45px;
+  max-width: 45px;
+  min-height: 45px;
+  max-height: 45px;
+  fill: #fff;
+}
+
+footer .ghub:hover {
+  fill: #48d8a4;
+}
+
+footer .email {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  min-width: 45px;
+  max-width: 45px;
+  min-height: 45px;
+  max-height: 45px;
+  fill: #fff;
+}
+
+footer .email:hover {
+  fill: #48d8a4;
+}
+
+footer p a {
+  color: #fff;
+  text-decoration: dotted;
+} 
+
+footer .copyright {
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+footer .heart {
+  font-size: 1.5rem;
+  color: red;
+}
+
+footer .heart:hover {
+  color: #48d8a4;
+}
+
 @media only screen and (max-width: 890px){
-  .profile{
+  .myCard .profile{
     margin-top: 4rem;
+  }
+  header {
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: .9rem;
+    margin-left: .6rem;
+  }
+  ul {
+    /* margin-left: 9rem; */
+  }
+  ul li {
+    padding: .3rem 1rem;
+  }
+  .card {
+    width: 100%;
   }
 }
 
@@ -333,7 +484,6 @@ footer {
   .card {
     margin: 0 auto 3rem auto;
   }
-  
 }
 
 @media only screen and (max-width: 745px){
@@ -375,29 +525,53 @@ footer {
     font-size: 1.2rem;
   }
 
-  .profile {
+  .myCard  {
     margin: 0 auto;
   }
 
-  #welcome img{
+  .myCard img{
     order: 2;
   }
 
   #welcome div{
     order: 1;
   }
-  
+
+  form {
+    max-width: 550px;
+    min-width: 550px;
+  }
+
+}
+
+@media only screen and (max-width: 580px){
+  ul li {
+    padding: .3rem .5rem;
+  } 
+  form {
+    max-width: 450px;
+    min-width: 450px;
+  }
 }
 
 @media only screen and (max-width: 430px){
   .card {
     width: 275px;
   }
+  .logo {
+    font-size: .8rem;
+  }
+  ul li {
+    padding: .3rem .4rem;
+  }
+  ul li a{
+    font-size: .8rem;
+  } 
   #welcome:target {
     scroll-margin-top: 2.5rem;
    }
   #project:target {
-  scroll-margin-top: 4rem;
+    scroll-margin-top: 4rem;
   }
   #skill:target {
     scroll-margin-top: 4rem;
@@ -426,17 +600,27 @@ footer {
   #contact h1 {
     font-size: 2rem;
   }
+  form {
+    max-width: 400px;
+    min-width: 400px;
+  }
 }
 
 @media only screen and (max-width: 365px){
   .card {
     width: 250px;
   }
+  ul li {
+    padding: .3rem .3rem;
+  }
+  #welcome:target {
+    scroll-margin-top: -2.3rem;
+  }
   #project:target {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 2.5rem;
    }
    #skill:target {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 2.5rem;
    }
   #welcome h1{
     padding-top: 3rem;
@@ -457,5 +641,8 @@ footer {
   #contact h1 {
     font-size: 1.8rem;
   }
+  form {
+    max-width: 3500px;
+    min-width: 350px;
+  }
 }
-
