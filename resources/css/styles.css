@@ -127,7 +127,7 @@ main {
 }
 
 .profile {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-left: 1rem;
   flex: 1 2;
   min-width: 250px;
@@ -460,7 +460,7 @@ footer .heart:hover {
 
 @media only screen and (max-width: 890px){
   .myCard .profile{
-    margin-top: 4rem;
+    margin-top: 8rem;
   }
   header {
     justify-content: space-between;
@@ -487,6 +487,10 @@ footer .heart:hover {
 }
 
 @media only screen and (max-width: 745px){
+  .myCard .profile{
+    margin-top: 4rem;
+  }
+
   #welcome {
     flex-direction: column;
   }
