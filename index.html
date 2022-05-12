@@ -9,6 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Mada:wght@500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('yqgV8In1ZXAHBqpaF');
+        })();
+    </script>
   </head>
   <body>
     <header>
@@ -27,14 +35,12 @@
           <div id="welcome">
             <div>
               <h1>Hey! I'm Justin.</h1>
-              <p class="me">I'm a Software Developer based in Thessaloniki, Greece. 
-               I hold a degree in computing from the University of Northampton. 
-               I see coding as a powerful tool that allows me to bring into life my ideas and 
-               other people's ideas by digitalizing them. 
-               Collaborating and being part of a team that builds complex and useful applications 
-               that make everyday life easier for people and business 
-               is a major motivation factor for me to keep learning new things and enjoy the learning process itself. 
-               My other interests include reading, traveling, and working out.
+              <p class="me">I'm a Software Developer based in Thessaloniki, Greece. I hold a degree in 
+                computing from the University of Northampton. I see coding as a powerful 
+                tool that allows me to bring into life my ideas and other people's ideas by 
+                digitalizing them. Being part of a team and improving user experience by
+                building complex and useful applicationsfor both people and businesses
+                drives me to keep growing while enjoying the learning journey.
               </p>
             </div>
             <div class="myCard">
@@ -166,7 +172,16 @@
           </div>
           <div id="contact">
             <h1>Contact</h1>
-            <form id="contactForm">
+              <form id="contactForm">
+                <!-- <input type="text" id="toName" /> -->
+                <label>Email</label>
+                <input type="email" id="fromName" placeholder="Email" />
+                <label>Message</label>
+                <textarea type="text" id="msg" placeholder="Write your message here"></textarea>
+                <button id="sentButton" class="tooltip">Submit</button>
+              </form>
+
+            <!-- <form id="contactForm">
               <label for="email">Email</label>
               <input type="text" id="email" name="email" placeholder="Your email">
 
@@ -174,7 +189,7 @@
               <textarea id="subject" name="subject" placeholder="Write your message here"></textarea>
               
               <input class="tooltip" type="submit" value="Submit">
-            </form>
+            </form> -->
           </div>
       </div>
     </main>

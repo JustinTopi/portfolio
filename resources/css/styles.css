@@ -360,7 +360,7 @@ form {
   min-width: 650px;
 }
 
-input[type=text], textarea{
+input[type=email], textarea {
   width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -368,18 +368,32 @@ input[type=text], textarea{
   resize: vertical;
 }
 
-input[type=submit] {
+/* input::placeholder {
+  text-align: left;
+  
+} */
+
+button {
   background-color: #0e2449;
   color: #fff;
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 5rem;
   padding: 1rem 1.2rem;
   cursor: pointer;
 }
-input[type=submit]:hover {
+
+.tooltip {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+button:hover {
   color: #48d8a4;
+}
+
+#msg {
+  height: 200px;
 }
 
 label {
@@ -388,7 +402,7 @@ label {
   font-size: 1.2rem;
 }
 
-#subject {
+#msg {
   height: 200px;
 }
 
