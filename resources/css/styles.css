@@ -350,7 +350,7 @@ rect {
   font-size: 3rem;
   margin-top: 4.5rem;
 }
-form {
+#contactForm {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
@@ -556,7 +556,7 @@ footer .heart:hover {
     order: 1;
   }
 
-  form {
+  #contactForm {
     max-width: 550px;
     min-width: 550px;
   }
@@ -567,7 +567,7 @@ footer .heart:hover {
   ul li {
     padding: .3rem .5rem;
   } 
-  form {
+  #contactForm {
     max-width: 450px;
     min-width: 450px;
   }
@@ -619,7 +619,7 @@ footer .heart:hover {
   #contact h1 {
     font-size: 2rem;
   }
-  form {
+  #contactForm {
     max-width: 400px;
     min-width: 400px;
   }
@@ -660,7 +660,7 @@ footer .heart:hover {
   #contact h1 {
     font-size: 1.8rem;
   }
-  form {
+  #contactForm {
     max-width: 3500px;
     min-width: 350px;
   }

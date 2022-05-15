@@ -1,7 +1,7 @@
 
 const sendMail = (params) => {
     let tempParams = {
-        from_name:document.getElementById("fromName").value,
+        from_email:document.getElementById("fromEmail").value,
         message:document.getElementById("msg").value
     };
     emailjs.send('service_cs9xtft', 'template_niw74fn', tempParams)
